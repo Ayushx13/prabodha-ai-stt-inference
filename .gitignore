@@ -1,0 +1,63 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+.conda/
+
+# --- Tests / tooling ---
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# --- Secrets & local config ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.huggingface/
+hf_token*
+
+# --- Model weights & caches (keep on HPC storage, never in git) ---
+models/
+checkpoints/
+hf_cache/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.nemo
+*.onnx
+*.gguf
+
+# --- Audio (may contain private recordings) ---
+*.wav
+*.flac
+*.mp3
+*.ogg
+*.m4a
+audio/
+samples/
+
+# --- HPC / containers ---
+slurm-*.out
+slurm-*.err
+*.sif
+*.simg
+
+# --- Benchmarks & logs ---
+results/
+benchmarks/output/
+*.log
+logs/
